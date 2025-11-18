@@ -1,165 +1,284 @@
-body{
+/* ----------------------------------------------------------
+   GLOBAL STYLES / RESET
+---------------------------------------------------------- */
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: whitesmoke;
-    color: #333;
-}
-h1,h2{
-    color: black;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
 }
 
-p{
-    font-size: 16px;
-    line-height: 1.6;
+body {
+    background: linear-gradient(135deg, #d8f3ff, #ffffff, #e3f6ff);
+    background-attachment: fixed;
+    color: #222;
+    padding-left: 220px; /* Sidebar space */
 }
 
-a{
-    color: #3498db;
+/* ----------------------------------------------------------
+   SIDEBAR (GLASSMORPHISM)
+---------------------------------------------------------- */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 210px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    border-right: 2px solid rgba(255,255,255,0.4);
+    box-shadow: 4px 0 25px rgba(0,0,0,0.1);
+    padding: 30px 20px;
+    z-index: 1000;
+}
+
+.sidebar .logo {
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    color: #0077ff;
+    margin-bottom: 30px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+}
+
+.sidebar nav ul li {
+    margin: 20px 0;
+}
+
+.sidebar nav ul li a {
     text-decoration: none;
-}
-a:hover{
-    text-decoration: underline;
-}
-
-.header-background{
-    background-color: #2c3e50;
-    color: white;
-    padding: 40px 0;
-    text-align: center;
-}
-nav ul{
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-    margin: 0;
-}
-
-nav ul li{
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a{
-    color: white;
-    font-size: 17.6px;
-    text-transform: uppercase;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
     padding: 10px 15px;
-    transition: 0.3 ease;
+    display: block;
+    border-radius: 10px;
+    transition: 0.3s;
 }
-.header-content h1{
-    font-size: 40px;
+
+.sidebar nav ul li a:hover {
+    transform: translateX(5px);
+    background: rgba(255,255,255,0.45);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* ----------------------------------------------------------
+   HERO BANNER
+---------------------------------------------------------- */
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 60px;
+    gap: 40px;
+    animation: fadeIn 1.5s ease;
+}
+
+.hero-left h1 {
+    font-size: 45px;
+    line-height: 1.2;
+}
+
+.hero-left h1 span {
+    color: #0077ff;
+}
+
+.hero-left p {
+    font-size: 18px;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 22px;
+    background: rgba(255,255,255,0.4);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.5);
+    text-decoration: none;
+    color: #0077ff;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    transform: scale(1.05);
+    background: rgba(255,255,255,0.7);
+}
+
+.hero-photo {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+    border: 3px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(10px);
+}
+
+/* ----------------------------------------------------------
+   GLASS SECTION BASE STYLE
+---------------------------------------------------------- */
+
+.glass-section {
+    margin: 60px 60px;
+    padding: 40px;
+    background: rgba(255,255,255,0.35);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.5);
+    box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+    animation: fadeInUp 1s ease;
+}
+
+.glass-section h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* ----------------------------------------------------------
+   QUALIFICATIONS TABLE
+---------------------------------------------------------- */
+
+.glass-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.glass-table th, .glass-table td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+.glass-table th {
+    background: rgba(0,119,255,0.25);
+    font-weight: 600;
+}
+
+/* ----------------------------------------------------------
+   SKILLS SECTION
+---------------------------------------------------------- */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    text-align: center;
+    padding: 25px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.45);
+    backdrop-filter: blur(8px);
+    transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card img {
+    width: 45px;
     margin-bottom: 10px;
 }
 
-.header-content p{
-    font-size: 19.2px;
+/* ----------------------------------------------------------
+   PROJECTS SECTION
+---------------------------------------------------------- */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
 }
 
-#about-me:hover{
-    padding: 40px 20px;
-    background-color: white;
-    text-align: center;
-
-}
-.profile-photo{
-    max-width: 200px;
-    border-radius: 50%;
-    margin-top: 20px;
+.project-card {
+    padding: 25px;
+    background: rgba(255,255,255,0.45);
+    border-radius: 15px;
+    backdrop-filter: blur(9px);
+    transition: 0.3s;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
 }
 
-#qualifications{
-    padding: 40px 20px;
-    background-color: #ecf0f1;
+.project-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255,255,255,0.6);
 }
-#qualifications table{
+
+/* ----------------------------------------------------------
+   CONTACT SECTION
+---------------------------------------------------------- */
+
+.contact-icons img {
+    width: 40px;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+.contact-icons img:hover {
+    transform: scale(1.1);
+}
+
+.contact-form input,
+.contact-form textarea {
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-#qualifications th, #qualifications td{
-    padding: 10px;
-    border: 1px solid #bdc3c7;
-    text-align: left;
-}
-
-#qualifications th{
-    background-color: #3498db;
-    color: white;
-}
-
-#interest-hobbies{
-    padding: 40px 20px;
-    color: white;
-    text-align: center;
-}
-
-.interest {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: white;
-    font-size: 19.2px;
-    border-radius: 5px;
-}
-
-.interest:hover{
-    background-color: #2980b9;
-}
-
-#contact-me{
-    padding: 40px 20px;
-    background-color: #ecf0f1;
-    text-align: center;
-}
-
-#contatcForm{
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgb(0, 0, 0, 0.1);
-}
-
-.form-field{
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #bdc3c7;
-    border-radius: 4px;
-}
-
-input[type="submit"]{
-    background-color: #3498db;
-    color: white;
-    padding: 10px 20px;
+    padding: 13px;
+    margin: 12px 0;
+    border-radius: 10px;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(8px);
 }
 
-input[type="submit"]:hover{
-    background-color: #2980b9;
-}
-
-#contact-me a{
-    color: #3498db;
-    text-decoration: none;
-    font-size: 17.6;
-    transition: 0.3s ease;
-}
-#contact-me a:hover{
-    color: #2980b9;
-    text-decoration: underline;
-}
-footer{
-    background-color: #2c3e50;
+.contact-form button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    background: #0077ff;
     color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    transform: scale(1.05);
+    background: #3399ff;
+}
+
+/* ----------------------------------------------------------
+   FOOTER
+---------------------------------------------------------- */
+
+footer {
     text-align: center;
     padding: 20px;
-    margin-top: 40px;
+    opacity: 0.7;
+}
 
+/* ----------------------------------------------------------
+   ANIMATIONS
+---------------------------------------------------------- */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }

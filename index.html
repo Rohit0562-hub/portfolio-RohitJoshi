@@ -1,87 +1,182 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Personal Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Joshi - Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-
-    <header class="header-background">
+<!-- ===================== SIDEBAR NAVIGATION ===================== -->
+<aside class="sidebar">
+    <div class="logo">RJ</div>
     <nav>
         <ul>
-            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about-me">About</a></li>
             <li><a href="#qualifications">Qualifications</a></li>
-            <li><a href="#interest-hobbies">Interest and Hobbies</a> </li>
-            <li><a href="#contact-me">Contact</a> </li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact-me">Contact</a></li>
         </ul>
     </nav>
-    <div class="header-content">
-        <h1>Hello, my name is Rohit Joshi.</h1>
-        <p>Student | Coding | Working Out</p>
+</aside>
+
+<!-- ===================== HERO BANNER ===================== -->
+<header id="hero" class="hero-section">
+    <div class="hero-left">
+        <h1>Hello, I'm <span>Rohit Joshi</span></h1>
+        <p>Student • Coding • Working Out</p>
+        <a href="#contact-me" class="hero-btn">Contact Me</a>
     </div>
-    </header>
+
+    <div class="hero-right">
+        <img src="RohitJoshi.jpg" alt="Profile Image" class="hero-photo">
+    </div>
+</header>
+
+<!-- ===================== MAIN CONTENT ===================== -->
 <main>
-<section id="about-me">
-        <h2 >About Me:</h2>
-        <img src="RohitJoshi.jpg" alt="Rohit's Profile" class="profile-photo">
-        <p> Hello, my name is Rohit Joshi. I am a 20 years old student pursuing my Bachelors Degree in Computer Science from Herald College Kathmandu.</p>
+
+<!-- ===================== ABOUT ME ===================== -->
+<section id="about-me" class="glass-section">
+    <h2>About Me</h2>
+    <p>Hello, my name is Rohit Joshi. I am a 20-year-old student pursuing my Bachelor's Degree in Computer Science from Herald College Kathmandu.</p>
 </section>
 
-<section id="qualifications">
-    <h2>Qualifications:</h2>
-<table>
-    <tr>
-        <th>Degree/Qualification</th>
-        <th>Institution</th>
-        <th>Board</th>
-        <th>Marks</th>
-    </tr>
-    <tr>
-        <td>High School Degree</td>
-        <td>St.Xavier's School, Godavari</td>
-        <td>NEB</td>
-        <td>A</td>
-    </tr>
-    <tr>
-        <td>Secondary Education</td>
-        <td>Little Angels School, Hattiban</td>
-        <td>NEB</td>
-        <td>A+</td>
-    </tr>
-</table>
+<!-- ===================== QUALIFICATIONS ===================== -->
+<section id="qualifications" class="glass-section">
+    <h2>Qualifications</h2>
+
+    <table class="glass-table">
+        <thead>
+            <tr>
+                <th>Degree / Qualification</th>
+                <th>Institution</th>
+                <th>Board</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>High School Degree</td>
+                <td>St. Xavier's School, Godavari</td>
+                <td>NEB</td>
+                <td>A</td>
+            </tr>
+
+            <tr>
+                <td>Secondary Education</td>
+                <td>Little Angels School, Hattiban</td>
+                <td>NEB</td>
+                <td>A+</td>
+            </tr>
+        </tbody>
+    </table>
 </section>
 
-<section id="interest-hobbies">
-        <h2>Interest and Hobbies:</h2>
-    <div class="interest" id="interest1">Working Out</div>
-    <div class="interest" id="interest2">Listening to Music</div>
-    <div class="interest" id="interest3">Cooking</div>
-    <div class="interest" id="interest4">Coding</div>
-</section>
+<!-- ===================== SKILLS ===================== -->
+<section id="skills" class="glass-section">
+    <h2>Skills & Proficiency</h2>
 
-<section id="contact-me">
-            <h2>Contact Me</h2>
-        <p>You can follow and contact me at:</p>
-        <p><a href="mailto:rohitjoshi05.np@gmail.com">rohitjoshi05.np@gmail.com</a></p>
-        <p><a href="https://www.facebook.com/rohit.joshi.353803" target="_blank">Follow me on facebook</a></p>
-        <div class="container">
-            <form id="contactForm">
-                <label for="name">Name:</label>
-                <input type="text" class="form-field" id="name" name="name" placeholder="Name">
-                <label for="email">Email:</label>
-                <input type="email" class="form-field" id="email" name="email" placeholder="Email">
-                <label for="message">Message:</label>
-                <textarea class="form-field" id="message" name="message" placeholder="Write Your Message Here" style="height: 200px"></textarea>
-                <input type="submit" value="Submit">
-            </form>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+            <p>Java</p>
         </div>
+
+        <div class="skill-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+
+            <p>Python</p>
+        </div>
+
+        <div class="skill-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+
+            <p>JavaScript</p>
+        </div>
+
+        <div class="skill-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
+
+            <p>PHP</p>
+        </div>
+
+        <div class="skill-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+
+            <p>Node.js</p>
+        </div>
+    </div>
 </section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section id="projects" class="glass-section">
+    <h2>Projects</h2>
+
+    <div class="projects-grid">
+
+        <div class="project-card">
+            <h3>Virtual Science Lab (Unity)</h3>
+            <p>A 3D interactive virtual lab made using Unity where students can conduct physics & chemistry experiments.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Canteen Management Backend</h3>
+            <p>Built using Node.js, Express & MongoDB. Handles menu, orders, payments, and real-time updates.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Bank Management System (Java)</h3>
+            <p>Java-based system with GUI for customer account management, transactions, and verification.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Python Encryption & Decryption</h3>
+            <p>Custom-built AES-like encryption algorithm for secure message encoding and decoding.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact-me" class="glass-section">
+    <h2>Contact Me</h2>
+
+    <div class="contact-icons">
+        <a href="mailto:rohitjoshi05.np@gmail.com">
+            <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email">
+
+        </a>
+
+        <a href="https://www.facebook.com/rohit.joshi.353803" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png"  alt="Facebook">
+
+        </a>
+    </div>
+
+    <form class="contact-form">
+        <label>Name</label>
+        <input type="text" placeholder="Your Name">
+
+        <label>Email</label>
+        <input type="email" placeholder="Your Email">
+
+        <label>Message</label>
+        <textarea rows="5" placeholder="Your Message"></textarea>
+
+        <button type="submit">Send</button>
+    </form>
+</section>
+
 </main>
 
+<!-- ===================== FOOTER ===================== -->
 <footer>
-        <p>Copyright &#169; 2025 Rohit Joshi - All rights reserved.</p>
- </footer>
+    <p>© 2025 Rohit Joshi - All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
